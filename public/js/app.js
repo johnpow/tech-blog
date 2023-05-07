@@ -28,7 +28,7 @@ try {
     });
 
     const data = await response.json();
-
+    console.log('this log' + data);
     // create li html 
     const $li = document.createElement('li');
     // create anchor tag
