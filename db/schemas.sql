@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS mvc_todos;
-CREATE DATABASE mvc_todos;
-
+DROP DATABASE IF EXISTS techblog_db;
+CREATE DATABASE techblog_db;
