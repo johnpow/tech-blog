@@ -1,9 +1,15 @@
+const blog_category = document.querySelector('#blogpost-category').value.trim();
+  
+console.log(blog_category)
+
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
   const blog_title = document.querySelector('#blogpost-title').value.trim();
   const blog_category = document.querySelector('#blogpost-category').value.trim();
   const blog_description = document.querySelector('#blogpost-desc').value.trim();
+
 
   if (blog_title && blog_category && blog_description) {
     const response = await fetch(`/api/blogposts`, {
@@ -17,7 +23,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create blogpost');
     }
   }
 };
@@ -39,9 +45,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-blogpost-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.blogpost-list')
   .addEventListener('click', delButtonHandler);
