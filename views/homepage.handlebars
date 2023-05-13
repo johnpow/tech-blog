@@ -5,19 +5,14 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/project/{{blogpost.id}}">{{blogpost.name}}</a>
+      <a href="/project/{{blogpost.id}}">{{blogpost.blog_title}}</a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount blogpost.needed_funding}}</span>
-      needed!
-    </p>
+
     <p>Created by {{blogpost.user.name}} on {{format_date blogpost.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      {{blogpost.description}}
+      {{blogpost.blog_description}}
     </p>
   </div>
 </div>

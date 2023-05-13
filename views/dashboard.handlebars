@@ -6,20 +6,20 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>Create a New Blog Post:</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="blogpost-title">Title:</label>
+        <input class="form-input" type="text" id="blogpost-title" name="blogpost-title" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        <label for="blogpost-category">Category:</label>
+        <input class="form-input" type="text" id="blogpost-category" name="blogpost-category" />
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <label for="blogpost-desc">Description:</label>
+        <textarea class="form-input" id="blogpost-desc" name="blogpost-desc"></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -34,7 +34,7 @@
     {{#each blogposts as |blogpost|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{blogpost.id}}">{{blogpost.name}}</a></h4>
+        <h4><a href="/project/{{blogpost.id}}">{{blogpost.blog_title}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{blogpost.id}}">DELETE</button>

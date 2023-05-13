@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Activity, SignUp } = require('../models');
+const { User, BlogPost, Comment } = require('../models');
 
 const userData = require('./userData.json');
-const activityData = require('./activityData.json');
+const blogpostData = require('./blogpostData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -14,22 +14,26 @@ const seedDatabase = async () => {
 
 
   
-  for (const activity of activityData) {
-    await Activity.create({
-      ...activity,
+  for (const blogpost of blogpostData) {
+    await BlogPost.create({
+      ...blogpost,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
-  const activities = await Activity.findAll();
-  const mappedActivities = activities.map(activity => activity.get({ plain: true }));
-  console.log(mappedActivities);
+  const blogposts = await BlogPost.findAll();
+  const mappedBlogPosts = blogposts.map(blogpost => blogpost.get({ plain: true }));
 
+  const comments = [
+  'This is a comment',
+  'This is another comment',
+  'This is a third comment'];
 
   for (let i = 0; i < 3; i++) {
-    await SignUp.create({
+    await Comment.create({
+      comment: comments[i],
       user_id: users[i].id,
-      activity_id: mappedActivities[i].id,
+      blogpost_id: mappedBlogPosts[i].id,
     });
 
   }

@@ -1,0 +1,17 @@
+[
+  {
+    "blog_title": "Tech Talk",
+    "blog_description": "This is the best tech talk ever!",
+    "blog_category": "General"
+  },
+  {
+    "blog_title": "Recommendation Models",
+    "blog_description": "Ranking and recommendation models are the best!",
+    "blog_category": "ML/AI"
+  },
+  {
+    "blog_title": "Coding for beginners",
+    "blog_description": "I love to code. Here are tips to get started!",
+    "blog_category": "Helpful Tips"
+  }
+]
