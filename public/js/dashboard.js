@@ -1,8 +1,4 @@
-const blog_category = document.querySelector('#blogpost-category').value.trim();
-  
-console.log(blog_category)
-
-
+console.log('hello')
 const newFormHandler = async (event) => {
   event.preventDefault();
 

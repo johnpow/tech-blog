@@ -33,7 +33,6 @@
       </div>
     </form>
   </div>
-
   {{#if blogposts.length}}
   <div class="col-md-6 blogpost-list">
     <h3>Current Blog Posts:</h3>
@@ -41,7 +40,7 @@
     {{#each blogposts as |blogpost|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{blogpost.id}}">{{blogpost.blog_title}}</a></h4>
+        <h4><a href="/blogposts/{{blogpost.id}}">{{blogpost.blog_title}}</a></h4>
       </div>
       <div class="col-md-2">
         <button class="btn btn-sm btn-success" data-id="{{blogpost.id}}">EDIT</button>

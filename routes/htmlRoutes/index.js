@@ -12,11 +12,13 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      order: [
+        ['date_created', 'DESC'],
+    ],
     });
-
+// console.log(blogpostData);
     // Serialize data so the template can read it
     const blogposts = blogpostData.map((blogpost) => blogpost.get({ plain: true }));
-
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       blogposts, 
@@ -35,10 +37,22 @@ router.get('/blogposts/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        { model: Comment, 
+          include: [        {
+                      model: User,
+                      attributes: ['name'],
+                  },],
+
+        },
+
       ],
+      order: [
+        [Comment, 'date_created', 'ASC'],
+    ],
     });
 
     const blogpost = blogpostData.get({ plain: true });
+
 
     res.render('blogpost', {
       ...blogpost,
