@@ -17,10 +17,11 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 300000,
+    maxAge: 30000000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
+    expires: 120000 //timeout if inactive for 2 minutes
   },
   resave: false,
   saveUninitialized: true,
@@ -40,6 +41,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

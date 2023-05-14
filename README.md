@@ -1,7 +1,7 @@
-# E-Commerce Back End
+# Tech Blog
 
 ## Description
-This is the backend for an eCommerce website. It is comprised of 4 main tables: category, product, tag and product_tag. Each containing useful information about the products being sold. The data can be access and updated via API routes.
+This is a tech blog for anyone who wants to come and discuss tech. You can view blog posts without an account, but if you want to get involed, you can create an account which allows you to comment on posts and create posts of your own.
 
 ## Table of Contents
 - [Usage](#usage)
@@ -14,20 +14,21 @@ This is the backend for an eCommerce website. It is comprised of 4 main tables: 
 ```bash
 node server.js
 ```
-- The APIs can be tested in Postman
+- The blog can contain lots of interesting content
 
-![user experience](./images/terminal.png)
+![user experience](./images/mainpage.png)
 
 
 ## Credits
-This application used starter code which can be found [here](https://github.com/coding-boot-camp/fantastic-umbrella). 
+This application is based on learning and code snippets from our MVC trainings. 
 
 ## Features
-- Explore the database via APIs
-- Easily update with new Categories, Products and Tags, creating new associations
+- Create and edit blog posts
+- Comment on blog posts
+- Create your own or multiple users
 - Use and enjoy!
 
 ## Access
-[Click to View Repository](https://github.com/johnpow/ecommerce-backend)
+[Click to View Repository](https://github.com/johnpow/tech-blog)
 
-[Click for Video Walkthrough](https://drive.google.com/file/d/1emJcB27Zmf8-_wYbaSzzA0aPtzMM6odn/view)
+[Click for Deployed Heroku Link](https://johnpow-tech-blog.herokuapp.com/)
