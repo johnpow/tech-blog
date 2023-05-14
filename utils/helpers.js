@@ -7,5 +7,10 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
+  dotdotdot: (str) => {
+    if (str.length > 400)
+      return str.substring(0,400) + '...';
+    return str;
+}
 };
 

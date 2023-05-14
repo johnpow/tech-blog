@@ -5,7 +5,6 @@ const newCommentHandler = async (event) => {
     const url = window.location.href;
     const blogpost_id = url.substring(url.lastIndexOf('/') + 1);
     
-    console.log(comment,blogpost_id)
     
     if (comment) {
       const response = await fetch(`/api/comment`, {

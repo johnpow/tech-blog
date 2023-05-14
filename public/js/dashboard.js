@@ -1,4 +1,4 @@
-console.log('hello')
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -40,10 +40,23 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const editButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+      document.location.replace(`/editblogposts/${id}`);
+
+  }
+};
+
 document
   .querySelector('.new-blogpost-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.blogpost-list')
+  .querySelector('#deleteBtn')
   .addEventListener('click', delButtonHandler);
+
+  document
+  .querySelector('#editBtn')
+  .addEventListener('click', editButtonHandler);

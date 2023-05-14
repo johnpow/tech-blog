@@ -401,6 +401,14 @@ p {
   line-height: 1.5;
 }
 
+.box {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display:flex-wrap;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
 .category {
   font-size: 0.8rem;
   margin: 0 0 1rem;
